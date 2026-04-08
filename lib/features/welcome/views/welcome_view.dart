@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gym/constants/ColorsConst.dart';
+import 'package:gym/features/welcome/views/widgets/Custom_Button.dart';
 import 'package:gym/features/welcome/views/widgets/Custom_activity_card.dart';
 import 'package:gym/features/welcome/views/widgets/Custom_appbar.dart';
 import 'package:gym/features/welcome/views/widgets/Custom_gym_photo.dart';
@@ -53,6 +54,9 @@ class WelcomeView extends StatelessWidget {
               ),
               SizedBox(height: 20),
               CustomGymPhoto(),
+              SizedBox(height: 20),
+              CustomButton(),
+              SizedBox(height: 20),
             ],
           ),
         ),
@@ -60,4 +64,3 @@ class WelcomeView extends StatelessWidget {
     );
   }
 }
-
