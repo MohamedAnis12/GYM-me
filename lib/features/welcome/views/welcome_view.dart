@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gym/constants/ColorsConst.dart';
+import 'package:gym/features/welcome/views/widgets/Custom_activity_card.dart';
 import 'package:gym/features/welcome/views/widgets/Custom_appbar.dart';
 import 'package:gym/features/welcome/views/widgets/Custom_week_days_calendar.dart';
 
@@ -30,6 +31,11 @@ class WelcomeView extends StatelessWidget {
               ),
             ),
             CustomWeekDaysCalendar(),
+            SizedBox(height: 30),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [CustomActivityCard(), CustomActivityCard()],
+            ),
           ],
         ),
       ),
