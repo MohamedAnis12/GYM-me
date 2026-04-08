@@ -1,8 +1,12 @@
 import 'package:flutter/material.dart';
 
 class CustomActivityCard extends StatelessWidget {
-  const CustomActivityCard({super.key});
+  const CustomActivityCard({super.key, required this.color, required this.number, required this.text, required this.icon});
   final double fixSize = 180;
+  final Color color;
+  final int number;
+  final String text;
+  final IconData icon;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -18,11 +22,11 @@ class CustomActivityCard extends StatelessWidget {
           children: [
             Container(
               height: 42,width: 42,
-              decoration: BoxDecoration(color: Colors.lightGreen[300],borderRadius: BorderRadius.circular(14)),
-              child: Icon(Icons.fitness_center,size: 32,color: Colors.green[800],)),
+              decoration: BoxDecoration(color: color.withOpacity(.2),borderRadius: BorderRadius.circular(14)),
+              child: Icon(icon,size: 32,color: color.withOpacity(1),)),
             Spacer(),
-            Text("12",style: TextStyle(fontSize: 42,fontWeight: FontWeight.bold),),
-            Text("Total Sessions",style: TextStyle(fontSize: 18),)
+            Text("$number",style: TextStyle(fontSize: 42,fontWeight: FontWeight.bold),),
+            Text(text,style: TextStyle(fontSize: 18),)
 
           ],
         ),
@@ -30,3 +34,5 @@ class CustomActivityCard extends StatelessWidget {
     );
   }
 }
+
+
