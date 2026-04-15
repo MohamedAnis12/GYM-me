@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gym/constants/ColorsConst.dart';
+import 'package:gym/features/Splits/views/splits_view.dart';
 import 'package:gym/features/welcome/views/widgets/Custom_Button.dart';
 import 'package:gym/features/welcome/views/widgets/Custom_activity_card.dart';
 import 'package:gym/features/welcome/views/widgets/Custom_appbar.dart';
@@ -55,7 +56,18 @@ class WelcomeView extends StatelessWidget {
               SizedBox(height: 20),
               CustomGymPhoto(),
               SizedBox(height: 20),
-              CustomButton(),
+              CustomButton(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) {
+                        return SplitsView();
+                      },
+                    ),
+                  );
+                },
+              ),
               SizedBox(height: 20),
             ],
           ),
